@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Noto+Sans+Mono:wght@500&family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: rgb(96, 30, 158);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:blueviolet }
+
+header{
+    background-color: rgb(235, 235, 235);
+}
+
+header .icono {
+    display: none;
+}
+
+header .logo{
+    margin: 0px;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.7em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 20px;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#informacion .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#caracteristicas {
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#caracteristicas .container{
+    padding: 100px 12px;
+}
+
+#caracteristicas h2{
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+#caracteristicas p{
+    display: none;
+}
+
+#caracteristicas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/carta1.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/carta2.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/carta3.jpg");
+}
+
+#juguetes .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 12px;
+}
+
+
+#final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;
+}
+
+#final button{
+    font-size: 1.75em;
+}
+
+#final h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: rgb(100, 100, 100);
+    padding: 12px;
+}
+
+footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px) {
+
+    html{
+        margin: 0;
+        padding: 0;
+        max-width: none;
+    }
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .icono {
+        display: inline-flex;
+    }
+
+    header .logo {
+        float:inline-start;
+        clear: initial;
+        padding-left: 5px;
+        margin: 0px;
+    }
+
+    header .icon {
+        margin: 0px;
+        margin-left: 30px;
+    }
+
+    header .container{
+        flex-direction: row;
+        max-width: none;
+        /* justify-content: space-between; */
+    }
+
+    header a {
+        padding: 0;
+        margin-right: 25px;
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        float: inline-end;
+        padding-bottom: 0;
+        padding-right: 15px;
+        position: absolute; right: 0%;
+    }
+
+    #hero {
+        height: 100vh;
+    }
+
+    #hero h1 {
+        font-size: 5em;
+    }
+
+    #informacion .container{
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+
+    #informacion .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    #informacion p{
+        font-family: 'Varela Round', sans-serif;
+        font-size: 1.7em;
+    }
+
+
+    #informacion .img-container{
+        background-image: url("media/informacion.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 450px;
+        width: 450px;
+        border-radius: 40px;
+    }
+
+    #caracteristicas .container {
+        max-width: none;
+        margin: 0;
+    }
+
+    #caracteristicas .info{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: auto;
+        min-height: 60vh;
+    }
+
+    #caracteristicas p{
+        display: block;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-size: 1.5em;
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    #caracteristicas h2{
+        margin-bottom: 60px;
+    }
+    
+    #caracteristicas h3{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+    }
+
+    #caracteristicas .carta{
+        padding: 50px;
+        background-size: 100% 200px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 0.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        margin: 20px;
+        text-align: center;
+        flex: 0 0 33.33%;
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/carta1-cropped.jpeg");
+    }
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/carta2-cropped.jpeg");
+    }
+    
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/carta3-cropped.jpeg");
+    }
+
+    #juguetes .container {
+        margin: 0;
+        max-width: none;
+    }
+
+    #juguetes h2{
+        text-align: center;
+        font-size: 4.5em;
+        font-weight: bold;
+    }
+
+    #juguetes .container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+
+    #juguetes .juguete1{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 100px 100px;
+        text-align: initial;
+        width: 40%;
+        height: 200px;
+        background-color: rgba(138, 43, 226, 0.5);
+        box-shadow: -4px 6px 8px rgb(60,60,60);
+        border-radius: 80px;
+    }
+
+    #juguetes .juguete1 p{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: 'Varela Round', sans-serif;
+        padding: 30px 20px;
+    }
+
+    #juguetes .img-container1{
+        background-image: url("media/juguete1.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 350px;
+        width: 350px;
+        float: right;
+        /* background-position: calc(100vw - 400px) 120px; */
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-right: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 14px 8px rgba(0, 0, 0, 0.270);
+    }
+
+    /* Juguete 2 */
+
+    #juguetes .juguete2{
+        display: flex;
+        float: inline-end;
+        margin: 100px 100px;
+        width: 40%;
+        height: 200px;
+        background-color: rgba(138, 43, 226, 0.5);
+        box-shadow: 4px 6px 8px rgb(60,60,60);
+        border-radius: 80px;
+    }
+
+    #juguetes .juguete2 p{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Varela Round', sans-serif;
+        padding: 25px 20px;
+    }
+
+    #juguetes .img-container2{
+        display: flex;
+        background-image: url("media/juguete2.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 350px;
+        width: 350px;
+        float: left;
+        /* background-position: calc(100vw - 400px) 120px; */
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-left: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: -14px 8px rgba(0, 0, 0, 0.270);
+    }
+
+    /* Juguete 3 */
+
+    #juguetes .juguete3{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 100px 100px;
+        text-align: initial;
+        width: 40%;
+        height: 200px;
+        float: left;
+        background-color: rgba(138, 43, 226, 0.5);
+        box-shadow: -4px 6px 8px rgb(60,60,60);
+        border-radius: 80px;
+    }
+
+    #juguetes .juguete3 p{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: 'Varela Round', sans-serif;
+        padding-left: 40px;
+        padding: 25px 20px;
+    }
+
+    #juguetes .img-container3{
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: url("media/juguete3.jpg");
+        background-size: cover;
+        background-position: center center;
+        float: right;
+        clear: right;
+        height: 350px;
+        width: 350px;
+        justify-content: end;
+        justify-items: end;
+        text-align: end;
+        /* background-position: calc(100vw - 400px) 120px; */
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 200px;
+        max-width: 100%;
+        box-shadow: 14px 8px rgba(0, 0, 0, 0.270);
+    }
+
+    /* Juguete 4 */
+
+        #juguetes .juguete4{
+        display: flex;
+        float: inline-end;
+        margin: 100px 100px;
+        width: 40%;
+        height: 200px;
+        background-color: rgba(138, 43, 226, 0.5);
+        box-shadow: 4px 6px 8px rgb(60,60,60);
+        border-radius: 80px;
+    }
+
+    #juguetes .juguete4 p{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: 'Varela Round', sans-serif;
+        padding-left: 40px;
+        padding: 25px 20px;
+    }
+
+    #juguetes .img-container4{
+        display: flex;
+        background-image: url("media/juguete4.jpg");
+        background-size: cover;
+        height: 350px;
+        width: 350px;
+        float: left;
+        clear: left;
+        /* background-position: calc(100vw - 400px) 120px; */
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 200px;
+        box-shadow: -14px 8px rgba(0, 0, 0, 0.270);
+    }
+
+    footer .container{
+        margin: 0;
+        max-width: 100%;
+    }
+}
